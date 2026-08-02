@@ -1,4 +1,4 @@
-#Verify the property of eigenvalues: det (A-11)=0
+#Verify the property of eigenvalues: det (A - λI) = 0
 
 import numpy as np
 
@@ -18,5 +18,5 @@ print(eigenvalues)
 # Verify det(A - λI) = 0
 for lam in eigenvalues:
     result = np.linalg.det(A - lam * np.eye(A.shape[0]))
-    print(f"\nFor λ = {lam:.4f}")       #.4 => display 4 digits after the decimal point.
+    print(f"\nFor λ = {lam:.4f}")       #: tell Python howthis value to be displayed and .4 => display 4 digits after the decimal point.
     print("det(A - λI) =", result)
