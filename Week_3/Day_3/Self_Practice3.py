@@ -1,0 +1,1 @@
+#Visualize the gradient descent process on a quadratic function.
