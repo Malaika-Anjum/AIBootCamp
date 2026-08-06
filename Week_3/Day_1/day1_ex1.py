@@ -11,4 +11,4 @@ print("Addition\n", A + B)
 print("Subtraction\n", A - B)
 
 # Scalar Multiplication
-print("Scalar Mult: \n", 3 * A)
+print("Scalar Multiplication : \n", 3 * A)

@@ -11,12 +11,12 @@ det = np.linalg.det(A)
 # Compute inverse
 inv = np.linalg.inv(A)
 
-print("Matrix A:")
+print("Matrix A : ")
 print(A)
 
-print("\nDeterminant:")
+print("\nDeterminant :")
 print(det)
 
-print("\nInverse:")
+print("\nInverse : ")
 print(inv)
 

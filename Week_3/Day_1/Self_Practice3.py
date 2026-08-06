@@ -12,7 +12,7 @@ block_diag = np.block([[A, np.zeros((2, 2), dtype=int)],[np.zeros((2, 2), dtype=
 
 print("Block Diagonal Matrix :\n", block_diag)
 
-######################
+#####################
 
 # #Built-In 
 

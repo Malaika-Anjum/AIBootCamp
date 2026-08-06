@@ -6,4 +6,4 @@ v = np.array([1, 0, -1])
 
 # Matrix-vector multiplication 
 result = np.dot(M, v)
-print("Matrix-Vector Multiplication: \n", result)
+print("Matrix-Vector Multiplication : \n", result)
