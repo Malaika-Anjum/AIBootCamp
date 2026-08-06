@@ -1,4 +1,4 @@
-#Compute Derivatives of Basic Functions
+# Compute Derivatives of Basic Functions
 
 import sympy as sp
 

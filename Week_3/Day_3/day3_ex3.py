@@ -1,4 +1,4 @@
-#Implement Gradient Descent for Linear Regression
+# Implement Gradient Descent for Linear Regression
 
 import numpy as np
 

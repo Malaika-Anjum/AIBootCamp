@@ -1,4 +1,4 @@
-#Visualize the Gradient Descent Process on a Quadratic Function
+# Visualize the Gradient Descent Process on a Quadratic Function
 
 import numpy as np
 import matplotlib.pyplot as plt

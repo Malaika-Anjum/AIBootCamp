@@ -1,4 +1,4 @@
-#Implement gradient descent with multiple learning rates and compare convergence speeds
+# Implement gradient descent with multiple learning rates and compare convergence speeds
 
 import numpy as np
 
