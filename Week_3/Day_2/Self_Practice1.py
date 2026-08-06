@@ -1,4 +1,4 @@
-#Compute eigenvalues and eigenvectors for larger matrices
+# Compute eigenvalues and eigenvectors for larger matrices
 
 import numpy as np
 

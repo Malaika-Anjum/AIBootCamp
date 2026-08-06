@@ -1,4 +1,4 @@
-#Calculate Determinant and Inverse of a Matrix
+# Calculate Determinant and Inverse of a Matrix
 
 import numpy as np
 

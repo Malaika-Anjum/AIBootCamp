@@ -1,4 +1,4 @@
-#Verify the property of eigenvalues: det (A - λI) = 0
+# Verify the property of eigenvalues: det (A - λI) = 0
 
 import numpy as np
 

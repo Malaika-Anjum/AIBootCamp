@@ -4,7 +4,7 @@ A = np.array([[3, 1], [1,3]])
 determinant = np.linalg.det(A)
 # print("Determinant: ", determinant)
 
-################
+#################
 
 eigenValues, eigneVectors = np.linalg.eig(A)
 # print("EigenVal\n", eigenValues)

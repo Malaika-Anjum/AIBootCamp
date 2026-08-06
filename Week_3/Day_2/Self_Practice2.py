@@ -1,4 +1,4 @@
-#Use SVD to reduce the dimensionality of a dataset
+# Use SVD to reduce the dimensionality of a dataset
 
 import numpy as np
 
