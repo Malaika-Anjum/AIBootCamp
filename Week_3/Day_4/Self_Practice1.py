@@ -3,20 +3,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Define the loss function
+# Define the Loss Function
 def loss(x, y):
     return x**2 + y**2
 
-# Define the gradients
+# Define the Gradients
 def gradient(x, y):
     return 2 * x, 2 * y
 
-# Assign values
+# Assign Values
 learning_rate = 0.1
 iterations = 20
 x, y = 4, 4      # Random starting point
 
-# Store optimization path
+# Store Optimization Path
 x_history = [x]
 y_history = [y]
 

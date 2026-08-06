@@ -46,4 +46,4 @@ for t in range(1, iterations + 1):
     # Update parameter
     theta = theta - learning_rate * m_hat / (np.sqrt(v_hat) + epsilon)
 
-print("Final Theta:", theta)
+print("Final Theta : ", theta)

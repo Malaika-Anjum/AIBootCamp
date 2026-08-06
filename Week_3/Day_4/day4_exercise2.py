@@ -29,4 +29,4 @@ n_epochs = 50
 
 # Perform SGD
 theta_opt = stochastic_gradient_descent(X_b, y, theta, learning_rate, n_epochs)
-print("Optimized Parameters:", theta_opt)
+print("Optimized Parameters : ", theta_opt)

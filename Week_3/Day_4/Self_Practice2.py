@@ -27,7 +27,7 @@ for epoch in range(epochs):
 
         theta_sgd -= learning_rate * gradient
 
-print("Theta using Vanilla SGD:", theta_sgd)
+print("Theta using Vanilla SGD : ", theta_sgd)
 
 # ------------------ Mini-Batch SGD ------------------
 
@@ -47,4 +47,4 @@ for epoch in range(epochs):
 
         theta_batch = theta_batch - learning_rate * gradient
 
-print("Theta using Mini-Batch SGD:", theta_batch)
+print("Theta using Mini-Batch SGD : ", theta_batch)
