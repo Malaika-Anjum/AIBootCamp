@@ -2,7 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.stats import norm
+from scipy.stats import norm, binom
 
 # Normal Distribution
 
@@ -27,3 +27,30 @@ plt.show()
 probability = norm.cdf(60, mean, std)
 
 print("P(X < 60) =", probability)
+
+
+################################
+
+# Binomial Distribution
+
+# Parameters
+n = 10       # Number of trials
+p = 0.5      # Probability of success
+
+# Possible number of successes
+x = np.arange(0, n + 1)
+
+# Probability for each value
+y = binom.pmf(x, n, p)
+
+# Plot
+plt.bar(x, y)
+plt.title("Binomial Distribution")
+plt.xlabel("Number of Successes")
+plt.ylabel("Probability")
+plt.show()
+
+# Probability of exactly 5 successes
+probability = binom.pmf(5, n, p)
+
+print("P(X = 5) =", probability)
