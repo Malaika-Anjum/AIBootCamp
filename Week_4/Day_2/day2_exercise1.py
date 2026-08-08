@@ -1,4 +1,4 @@
-# Simulate Dice Rolls and Calculate Probabilities
+# Plot and Explore Various Distributions
 
 #url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
 
