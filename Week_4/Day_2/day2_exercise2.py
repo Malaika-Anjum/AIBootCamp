@@ -1,29 +1,27 @@
-# Create and Analyze Random Variables
+# Analyze Dataset's Distribution
 
+import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
-import numpy as np
-from scipy.stats import uniform
+from scipy.stats import skew, kurtosis
 
+# Load Iris dataset
+url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
+df = pd.read_csv(url)
 
-# Discrete random variable: a fair six-sided die
-outcomes = np.arange(1, 7)
-probabilities = np.array([1/6]* 6)
+# Select a numerical column
+feature = df["sepal_length"]
 
-plt.bar(outcomes, probabilities, color="steelblue", alpha=0.8)
-plt.title("PMF of a Fair Dice Roll")
-plt.xlabel("Outcome")
-plt.ylabel("Probability")
-plt.xticks(outcomes)
-plt.ylim(0, 0.2)
-plt.show()
+# Calculate distribution statistics
+print("Mean:", feature.mean())
+print("Median:", feature.median())
+print("Standard Deviation:", feature.std())
+print("Skewness:", skew(feature))
+print("Kurtosis:", kurtosis(feature))
 
-# Continuous random variable: Uniform(0, 1)
-x = np.linspace(0, 1, 100)
-pdf = uniform.pdf(x, loc=0, scale=1)
-
-plt.plot(x, pdf, color="crimson")
-plt.title("PDF of Uniform(0, 1)")
-plt.xlabel("x")
-plt.ylabel("f(x)")
-plt.ylim(0, 1.2)
+# Visualize the distribution
+sns.histplot(feature, kde=True, bins=15, color="skyblue")
+plt.title("Distribution of Sepal Length")
+plt.xlabel("Sepal Length")
+plt.ylabel("Frequency")
 plt.show()
