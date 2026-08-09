@@ -32,3 +32,39 @@ upper_std = np.sqrt(upper_var)
 
 print("95% CI for Variance:", (lower_var, upper_var))
 print("95% CI for Standard Deviation:", (lower_std, upper_std))
+
+
+####################
+
+# #Simpler code
+
+# import numpy as np
+# from scipy.stats import t
+
+# # Sample data
+# data = [12, 15, 14, 10, 13, 17, 16, 14, 15, 13]
+
+# # Step 1: Sample mean
+# mean = np.mean(data)
+
+# # Step 2: Sample size
+# n = len(data)
+
+# # Step 3: Sample standard deviation
+# std = np.std(data, ddof=1)
+
+# # Step 4: Standard Error
+# SE = std / np.sqrt(n)
+
+# # Step 5: t-value for 95% confidence
+# t_value = t.ppf(0.975, df=n-1)
+
+# # Step 6: Margin of Error
+# ME = t_value * SE
+
+# # Step 7: Confidence Interval
+# lower = mean - ME
+# upper = mean + ME
+
+# print("Mean:", mean)
+# print("95% Confidence Interval:", (lower, upper))
