@@ -1,15 +1,17 @@
-# Calculate Correlation between Features
-
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-# Load dataset
-data = pd.read_csv(r"E:\AIBootCamp\Week_4\Day_6\students_data.csv")
+# Load Iris dataset
+url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
+df = pd.read_csv(url)
 
-# Select numerical columns
-numeric_data = data.select_dtypes(include="number")
+del df["species"]
 
-# Calculate correlation
-correlation = numeric_data.corr()
+# Compute correlation matrix
+correlation_matrix = df.corr()
 
-print("Correlation Matrix:")
-print(correlation)
+# Plot Heatmap
+sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm")
+plt.title("Feature Correlations")
+plt.show()
