@@ -2,6 +2,7 @@
     # Experiment with different values of α (e.g., 0.1, 0, 10) for Ridge and Lasso Regression
     # Observe how the model's coefficients and performance change
     
+
 # Compare Linear Regression, Ridge Regression, and Lasso Regression
 
 import pandas as pd
@@ -45,9 +46,9 @@ linear_model.fit(X_train, y_train)
 y_pred = linear_model.predict(X_test)
 
 print("R² Score :", round(r2_score(y_test, y_pred),4))
-print("MAE      :", round(mean_absolute_error(y_test, y_pred),2))
-print("MSE      :", round(mean_squared_error(y_test, y_pred),2))
-print("RMSE     :", round(mean_squared_error(y_test, y_pred)**0.5,2))
+print("Mean Aboslute Error      :", round(mean_absolute_error(y_test, y_pred),2))
+print("Mean Squared Error      :", round(mean_squared_error(y_test, y_pred),2))
+print("Root Mean Squared Error     :", round(mean_squared_error(y_test, y_pred)**0.5,2))
 
 coef_df = pd.DataFrame({
     "Feature": X.columns,
@@ -70,9 +71,9 @@ for alpha in ridge_alphas:
     y_pred = ridge.predict(X_test)
 
     print("R² Score :", round(r2_score(y_test, y_pred),4))
-    print("MAE      :", round(mean_absolute_error(y_test, y_pred),2))
-    print("MSE      :", round(mean_squared_error(y_test, y_pred),2))
-    print("RMSE     :", round(mean_squared_error(y_test, y_pred)**0.5,2))
+    print("Mean Absolute Error      :", round(mean_absolute_error(y_test, y_pred),2))
+    print("Mean Squared Error      :", round(mean_squared_error(y_test, y_pred),2))
+    print("Root Mean Squared Error     :", round(mean_squared_error(y_test, y_pred)**0.5,2))
 
     coef_df = pd.DataFrame({
         "Feature": X.columns,
@@ -99,9 +100,9 @@ for alpha in lasso_alphas:
     y_pred = lasso.predict(X_test)
 
     print("R² Score :", round(r2_score(y_test, y_pred),4))
-    print("MAE      :", round(mean_absolute_error(y_test, y_pred),2))
-    print("MSE      :", round(mean_squared_error(y_test, y_pred),2))
-    print("RMSE     :", round(mean_squared_error(y_test, y_pred)**0.5,2))
+    print("Mean Absolute Error      :", round(mean_absolute_error(y_test, y_pred),2))
+    print("Mean Squared Error      :", round(mean_squared_error(y_test, y_pred),2))
+    print("Root Mean Squared Error     :", round(mean_squared_error(y_test, y_pred)**0.5,2))
 
     coef_df = pd.DataFrame({
         "Feature": X.columns,
