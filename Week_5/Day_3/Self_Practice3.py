@@ -1,7 +1,5 @@
 # Feature importance with Lasso :
     # Use Lasso Regression to perform feature selection and identify the most relevant predictors
-    
-# Feature Selection using Lasso Regression
 
 import pandas as pd
 
