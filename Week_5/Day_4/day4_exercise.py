@@ -40,6 +40,9 @@ print("Recall:", recall_score(y_test, y_pred))
 print("F1 Score:", f1_score(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
+##############
+
+# Analyze model Performance
 
 # Plot decision boundary
 x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
