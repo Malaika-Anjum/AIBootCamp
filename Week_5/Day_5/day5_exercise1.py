@@ -1,3 +1,6 @@
+# Evaluate a model using cross-validation to obtain a more accurate 
+# estimate of model performance.
+
 from sklearn.datasets import load_iris
 from sklearn.model_selection import cross_val_score, KFold
 from sklearn.ensemble import RandomForestClassifier
