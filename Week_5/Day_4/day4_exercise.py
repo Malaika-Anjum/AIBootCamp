@@ -47,14 +47,20 @@ print("\nClassification Report:\n", classification_report(y_test, y_pred))
 # Plot decision boundary
 x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
 y_min, y_max = X[:, 1].min() -1, X[:, 1].max() + 1
+
 xx, yy = np.meshgrid(
     np.arange(x_min, x_max, 0.1), 
     np.arange(y_min, y_max, 0.1)
     )
 
 # Predict probabilities for grid points
-Z = model.predict(np.c_[xx.ravel(), yy.ravel()])
-Z = Z.reshape(xx.shape)
+grid = pd.DataFrame(
+    np.c_[xx.ravel(), yy.ravel()],
+    columns=["Age", "Salary"]
+)
+
+Z = model.predict(grid)         #ravel() flattens everything
+Z = Z.reshape(xx.shape)         #reverses the ravel()
 
 # Plot
 plt.contourf(xx, yy, Z, alpha=0.8, cmap="coolwarm")
