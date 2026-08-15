@@ -1,3 +1,5 @@
+# Generate and interpret a confusion matrix for a classification model
+
 from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import load_iris
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report
