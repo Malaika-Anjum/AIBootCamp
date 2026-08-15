@@ -1,3 +1,5 @@
+# Iplement k-NN for a classification task, experimenting with different values of k.
+
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -22,15 +24,44 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Experiment with different values of k
-for k in range(1, 11):
-    # Initialize k-NN model
-    knn = KNeighborsClassifier(n_neighbors=k)
-    knn.fit(X_train, y_train)
+# # Experiment with different values of k
+# for k in range(1, 11):
+#     # Initialize k-NN model
+#     knn = KNeighborsClassifier(n_neighbors=k)
+#     knn.fit(X_train, y_train)
     
-    # Predict on test data
-    y_pred = knn.predict(X_test)
+#     # Predict on test data
+#     y_pred = knn.predict(X_test)
     
-    # Evaluate performance
-    accuracy = accuracy_score(y_test, y_pred)
-    print(f"k = {k}, Accuracy = {accuracy:.2f}")
+#     # Evaluate performance
+#     accuracy = accuracy_score(y_test, y_pred)
+#     print(f"k = {k}, Accuracy = {accuracy:.2f}")
+    
+    
+# Compare k-NN results to logistic regression, analyzing accuracy and other metric.
+     
+# Train logistic regression model
+log_reg = LogisticRegression(max_iter=200)
+log_reg.fit(X_train, y_train)
+
+# Predict using logistic regression
+y_pred_lr = log_reg.predict(X_test)
+
+# Evaluate logistic regression
+accuracy_lr = accuracy_score(y_test, y_pred_lr)
+print("Logistic Regression Accuracy: ", accuracy_lr)
+
+# Evaluate k-NN 
+best_k = 5
+knn = KNeighborsClassifier(n_neighbors=best_k)
+knn.fit(X_train, y_train)
+y_pred_knn = knn.predict(X_test)
+accuracy_knn = accuracy_score(y_test, y_pred_knn)
+print(f"k-NN Accuracy k={best_k}: ", accuracy_knn)
+
+# Detailed Comparison
+print("\n Logistic Regression Classification Report:")
+print(classification_report(y_test, y_pred_lr))
+
+print("\n k-NN Regression Classification Report:")
+print(classification_report(y_test, y_pred_knn))
