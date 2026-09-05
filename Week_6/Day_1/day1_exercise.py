@@ -8,12 +8,12 @@ url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic
 df = pd.read_csv(url)
 
 # Display dataset Information
-# print("Dataset Info: \n")
-# print(df.info())
+print("Dataset Info: \n")
+print(df.info())
 
-# # Preview the first few rows
-# print("\n Dataset Preview:\n")
-# print(df.head())
+# Preview the first few rows
+print("\n Dataset Preview:\n")
+print(df.head())
 
 # Seperate features
 categorical_features = df.select_dtypes(include=["object"]).columns
