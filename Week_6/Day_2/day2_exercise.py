@@ -35,7 +35,12 @@ scaler = MinMaxScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Split scaled data
-X_train_scaled, X_test_scaled, y_train_scaled, y_test_scaled = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
+X_train_scaled, X_test_scaled, y_train_scaled, y_test_scaled = train_test_split(
+    X_scaled, 
+    y, 
+    test_size=0.2, 
+    random_state=42
+    )
 
 # Train k-NN classifier on scaled data
 knn_scaled = KNeighborsClassifier(n_neighbors=5)
