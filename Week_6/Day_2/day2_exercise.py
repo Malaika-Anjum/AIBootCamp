@@ -50,7 +50,12 @@ scaler = StandardScaler()
 X_stand = scaler.fit_transform(X)
 
 # Split standardized data
-X_train_std, X_test_std, y_train_std, y_test_std = train_test_split(X_stand, y, test_size=0.2, random_state=42)
+X_train_std, X_test_std, y_train_std, y_test_std = train_test_split(
+    X_stand, 
+    y, 
+    test_size=0.2, 
+    random_state=42
+    )
 
 # Train k-NN classifier on standardized data
 knn_stand = KNeighborsClassifier(n_neighbors=5)
